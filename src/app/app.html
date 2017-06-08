@@ -1,0 +1,21 @@
+<ion-menu [content]="content" >
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content style="background: url(/assets/images/img_umbrella.png) no-repeat center;background-size:cover;" class="side-menu-left has-header">
+    <ion-list>
+      <div *ngFor="let p of pages">
+        <button ion-item *ngIf="p.status" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+      </div>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" ba></ion-nav>
