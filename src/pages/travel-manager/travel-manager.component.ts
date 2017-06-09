@@ -6,9 +6,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelManagerComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
+    ngOnInit() {
+    }
+
+    myTravelPlans() {
+      console.log('View Travel Plans');
+    }
+
+    createNewTravelPlan() {
+      console.log('Create New Travel Plan');
+    }
+
+    sendTravelInvitations() {
+      console.log('Send Travel Invitations');
+    }
+
+    editTravelPlan() {
+      console.log('Edit Travel Plan');
+    }
+
+    removeTravelPlan() {
+      console.log('Remove Travel Plan');
+    }
   }
-
-}

@@ -12,9 +12,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TrackTravelComponent } from '../pages/track-travel/track-travel.component';
 import { TravelManagerComponent } from '../pages/travel-manager/travel-manager.component';
 import { SettingsComponent } from '../pages/settings/settings.component';
-import { LogoutComponent } from '../pages/logout/logout.component';
+//import { LogoutComponent } from '../pages/logout/logout.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { ReportIssueComponent } from '../pages/report-issue/report-issue.component';
+//import { MenuComponentA } from '../pages/menu/menu.component';
+
+import { GlobalVars } from '../providers/global-vars';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,9 @@ import { ReportIssueComponent } from '../pages/report-issue/report-issue.compone
     TrackTravelComponent,
     TravelManagerComponent,
     SettingsComponent,
-    LogoutComponent,
     AboutComponent,
     ReportIssueComponent
+    //MenuComponentA
   ],
   imports: [
     BrowserModule,
@@ -38,12 +41,21 @@ import { ReportIssueComponent } from '../pages/report-issue/report-issue.compone
     MyApp,
     TravelHome,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    TrackTravelComponent,
+    TravelManagerComponent,
+    SettingsComponent,
+    AboutComponent,
+    ReportIssueComponent
+    //MenuComponentA
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalVars,
+    TrackTravelComponent
+    //LogoutComponent
   ]
 })
 export class AppModule {}

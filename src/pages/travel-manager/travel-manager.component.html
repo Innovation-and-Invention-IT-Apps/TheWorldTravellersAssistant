@@ -1,3 +1,48 @@
-<p>
-  travel-manager works!
-</p>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Manage Your Travels</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" style="background: url(/assets/images/img_world.png) no-repeat center;background-size:cover;" class="has-header">
+  <div>
+    <button
+      ion-button color="primary"
+      (click)="myTravelPlans()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> My Travel Plans </button>
+    <button
+      ion-button color="primary"
+      (click)="createNewTravelPlan()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Create New Travel Plan </button>
+    <button
+      ion-button color="primary"
+      (click)="sendTravelInvitations()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Send Travel Invitations </button>
+    <button
+      ion-button color="primary"
+      (click)="editTravelPlan()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Edit Travel Plan </button>
+    <button
+      ion-button color="primary"
+      (click)="removeTravelPlan()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Remove Travel Plan </button>
+  </div>
+</ion-content>

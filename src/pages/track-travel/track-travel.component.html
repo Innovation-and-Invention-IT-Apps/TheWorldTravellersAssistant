@@ -1,3 +1,41 @@
-<p>
-  track-travel works!
-</p>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Travel Tracker</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" style="background: url(/assets/images/img_world.png) no-repeat center;background-size:cover;" class="has-header">
+  <div>
+    <button
+      ion-button color="primary"
+      (click)="trackCurrentTravel()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Track Current Travel </button>
+    <button
+      ion-button color="primary"
+      (click)="viewTravelPartners()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> View Travel Partners </button>
+    <button
+      ion-button color="primary"
+      (click)="contactTravellers()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Contact Travellers </button>
+    <button
+      ion-button color="primary"
+      (click)="trackTravelStatus()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Track Travel Status </button>
+  </div>
+</ion-content>

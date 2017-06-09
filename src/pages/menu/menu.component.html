@@ -1,0 +1,36 @@
+<ion-content style="background: url(/assets/images/img_umbrella.png) no-repeat center;background-size:cover;" class="side-menu-left has-header">
+  <ion-list>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('TravelHome')">
+      <ion-icon name="home"> </ion-icon>
+      Traveller Home
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('TrackTravelComponent')">
+      <ion-icon name="bus"> </ion-icon>
+      Travel Tracker
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('TravelManagerComponent')">
+      <ion-icon name="color-wand"> </ion-icon>
+      Manage Travel
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('SettingsComponent')">
+      <ion-icon name="settings"> </ion-icon>
+      Settings
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('LogoutComponent')">
+      <ion-icon name="log-out"> </ion-icon>
+      Logout
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('AboutComponent')">
+      <ion-icon name="information-circle"> </ion-icon>
+      About Us
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('ReportIssueComponent')">
+      <ion-icon name="mail"> </ion-icon>
+      Report Issue
+    </button>
+    <button ion-item *ngIf="!loginStatus" class="extra-margin-menu-top extra-margin-menu-bottom" (click)="openPage('ListPage')">
+      <ion-icon name="logo-github"> </ion-icon>
+      List Page Sample
+    </button>
+  </ion-list>
+</ion-content>

@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding="true" style="background: url(/assets/images/img_world.png) no-repeat center;background-size:cover;" class="has-header">
-  <form id="login-form2" class="extra-margin-bottom">
+  <form *ngIf="!globalVars.isLoggedIn" id="login-form2" class="extra-margin-bottom">
     <ion-list id="login-list1">
       <label class="item item-input margin-above-item" id="login-input3">
         <span class="input-label credentials-labels">{{username}}</span>
@@ -22,8 +22,50 @@
 
       <div class="extra-margin-top" style="height: 40px; margin-top: 25px;"></div>
 
-      <button ion-button color="primary" (click)="login()" style="font-weight:600;color:#2B769C;" class="button button-stable button-block icon-left ion-log-in"> Log in</button>
-      <button ion-button color="primary" (click)="signup()" style="font-weight:600;color:#1F3E6B;" class="button button-positive button-block button-icon icon-left ion-android-person-add">Or Signup now...</button>
-
+      <button
+        ion-button color="primary"
+        (click)="login()"
+        style="font-weight:600;color:#2B769C;"
+        class="button button-stable button-block
+          icon-left ion-log-in extra-margin-top
+          extra-margin-bottom"> Log in </button>
+      <button
+        ion-button color="primary"
+        (click)="signup()"
+        style="font-weight:600;color:#1F3E6B;"
+        class="button button-positive
+          button-block button-icon
+          icon-left ion-android-person-add
+          extra-margin-top extra-margin-bottom"> Or Signup now... </button>
   </form>
+  <div *ngIf="globalVars.isLoggedIn">
+    <button
+      ion-button color="primary"
+      (click)="trackCurrentTravel()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Track Current Travel </button>
+    <button
+      ion-button color="primary"
+      (click)="viewTravelPartners()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> View Travel Partners </button>
+    <button
+      ion-button color="primary"
+      (click)="contactTravellers()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Contact Travellers </button>
+    <button
+      ion-button color="primary"
+      (click)="trackTravelStatus()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Track Travel Status </button>
+  </div>
 </ion-content>

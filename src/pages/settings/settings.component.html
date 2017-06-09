@@ -1,3 +1,42 @@
-<p>
-  settings works!
-</p>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" style="background: url(/assets/images/img_world.png) no-repeat center;background-size:cover;" class="has-header">
+  <div>
+    <button
+      ion-button color="primary"
+      (click)="enableGPS()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Enable GPS </button>
+    <button
+      ion-button color="primary"
+      (click)="enableData()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Enable Data (3/4G/WiFi) </button>
+    <button
+      ion-button color="primary"
+      (click)="setRefreshInterval()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Set Refresh Interval </button>
+    <button
+      *ngIf="globalVars.isLoggedIn"
+      ion-button color="primary"
+      (click)="sendSOS()"
+      style="font-weight:600;color:#2B769C;"
+      class="button button-stable button-block
+        icon-left ion-log-in extra-margin-top
+        extra-margin-bottom"> Send SOS </button>
+  </div>
+</ion-content>

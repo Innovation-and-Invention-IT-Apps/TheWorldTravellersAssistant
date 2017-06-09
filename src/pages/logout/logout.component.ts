@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-logout',
-  templateUrl: './logout.component.html'
-})
-export class LogoutComponent implements OnInit {
+import { GlobalVars } from '../../providers/global-vars';
 
-  constructor() { }
+@Injectable()
+export class LogoutComponent {
 
-  ngOnInit() {
+  constructor(private globalVars: GlobalVars) { }
+
+  logout() {
+      this.globalVars.setIsLoggedIn(false);
   }
 
 }
